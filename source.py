@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import mysql.connector
 from telegram.ext import RegexHandler, CommandHandler, ConversationHandler, MessageHandler, Filters, CallbackQueryHandler
 import telegram
