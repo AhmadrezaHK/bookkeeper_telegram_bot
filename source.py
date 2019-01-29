@@ -4,7 +4,7 @@ from telegram.ext import RegexHandler, CommandHandler, ConversationHandler, Mess
 import telegram
 import re
 
-chortke_bot = telegram.Bot(token='590929905:AAHvs0m18qm_g84NKQXyWbQC_K9lmu5uYbs')
+chortke_bot = telegram.Bot(token='YOUR TOKEN')
 
 import logging
 
@@ -376,18 +376,8 @@ def menu(bot, update):
     create_debt_state = 0
     return MainMenu
 
-
-# i = 0
-# def temp(bot, update):
-#     global i
-#     print(update.message.audio)
-#     update.message.audio.get_file().download()
-#     print(i)
-#     i += 1
-
-
 def main():
-    updater = telegram.ext.Updater(token='590929905:AAHvs0m18qm_g84NKQXyWbQC_K9lmu5uYbs')
+    updater = telegram.ext.Updater(token='YOUR TOKEN')
     dispatcher = updater.dispatcher
 
     conv_handler = ConversationHandler(
@@ -421,9 +411,6 @@ def main():
     )
 
     dispatcher.add_handler(conv_handler)
-
-    # t = MessageHandler(Filters.audio, temp)
-    # dispatcher.add_handler(t)
 
     updater.start_polling()
 
